@@ -16,10 +16,15 @@ variable "zone" {
 
 variable "machine_type" {
   type    = string
-  default = "f1-micro"
+  default = "e2-small"
+}
+
+variable "image" {
+  type    = string
+  default = "debian-10-buster-v20220920"
 }
 
 variable "bootstrap_script" {
   type    = string
-  default = "scripts/bootstrap.sh"
+  default = "./scripts/bootstrap.sh"
 }
