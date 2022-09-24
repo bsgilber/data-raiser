@@ -4,3 +4,7 @@ gcloud --project gilbert-learning-gcp-113 beta compute ssh airbyte-vm -- -L 8000
 # example to ping and check the health of the airbyte server
 # use the web server output in place of the ip address
 curl http://35.225.124.118:8000/api/v1/health
+
+# install octavia cli, the airbyte cli tool to build connectors with yamls
+curl -s -o- https://raw.githubusercontent.com/airbytehq/airbyte/master/octavia-cli/install.sh | bash
+

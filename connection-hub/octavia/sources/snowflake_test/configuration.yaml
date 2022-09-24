@@ -1,0 +1,27 @@
+# Configuration for airbyte/source-snowflake
+# Documentation about this connector can be found at https://docs.airbyte.io/integrations/sources/snowflake
+resource_name: "snowflake-test"
+definition_type: source
+definition_id: e2d65910-8c8b-40a1-ae7d-ee2416b2bfa2
+definition_image: airbyte/source-snowflake
+definition_version: 0.1.22
+
+# EDIT THE CONFIGURATION BELOW!
+configuration:
+  host: # REQUIRED | string | The host domain of the snowflake instance (must include the account, region, cloud environment, and end with snowflakecomputing.com). | Example: accountname.us-east-2.aws.snowflakecomputing.com
+  role: # REQUIRED | string | The role you created for Airbyte to access Snowflake. | Example: AIRBYTE_ROLE
+  schema: # REQUIRED | string | The source Snowflake schema tables. | Example: AIRBYTE_SCHEMA
+  database: # REQUIRED | string | The database you created for Airbyte to access data. | Example: AIRBYTE_DATABASE
+  warehouse: # REQUIRED | string | The warehouse you created for Airbyte to access data. | Example: AIRBYTE_WAREHOUSE
+  credentials:
+    ## -------- Pick one valid structure among the examples below: --------
+    auth_type: "OAuth" # REQUIRED | string
+    client_id: ${CLIENT_ID} # SECRET (please store in environment variables) | REQUIRED | string | The Client ID of your Snowflake developer application.
+    access_token: ${ACCESS_TOKEN} # SECRET (please store in environment variables) | OPTIONAL | string | Access Token for making authenticated requests.
+    client_secret: ${CLIENT_SECRET} # SECRET (please store in environment variables) | REQUIRED | string | The Client Secret of your Snowflake developer application.
+    refresh_token: ${REFRESH_TOKEN} # SECRET (please store in environment variables) | OPTIONAL | string | Refresh Token for making authenticated requests.
+    ## -------- Another valid structure for credentials: --------
+    # password: ${PASSWORD} # SECRET (please store in environment variables) | REQUIRED | string | The password associated with the username.
+    # username: # REQUIRED | string | The username you created to allow Airbyte to access the database. | Example: AIRBYTE_USER
+    # auth_type: "username/password" # REQUIRED | string
+  jdbc_url_params: # OPTIONAL | string | Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3).
