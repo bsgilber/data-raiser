@@ -1,1 +1,1 @@
-./connection-hub/*.tfstate*
+./infra/*.tfstate*
