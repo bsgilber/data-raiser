@@ -4,6 +4,11 @@ variable "project_id" {
   default     = "gilbert-learning-gcp-113"
 }
 
+variable "project_number" {
+  type    = string
+  default = "133727130486"
+}
+
 variable "region" {
   type    = string
   default = "us-central1"
@@ -31,5 +36,5 @@ variable "bootstrap_script" {
 
 variable "airflow_image" {
   type    = string
-  default = "composer-2.0.27-airflow-2.2.5"
+  default = "composer-2.0.26-airflow-2.2.5"
 }

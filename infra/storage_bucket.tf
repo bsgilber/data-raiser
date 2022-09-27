@@ -7,6 +7,7 @@ resource "google_storage_bucket" "default" {
   force_destroy = false
   location      = "US"
   storage_class = "STANDARD"
+  project       = var.project_id
   versioning {
     enabled = true
   }
