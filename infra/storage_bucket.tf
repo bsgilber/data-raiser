@@ -1,14 +1,7 @@
-resource "random_id" "bucket_prefix" {
-  byte_length = 8
-}
+module "landing_data_bucket_creation" {
+  source = "./modules/landing_bucket"
 
-resource "google_storage_bucket" "default" {
-  name          = "${random_id.bucket_prefix.hex}-bucket-tfstate"
-  force_destroy = false
-  location      = "US"
-  storage_class = "STANDARD"
-  project       = var.project_id
-  versioning {
-    enabled = true
-  }
+  env            = "DEV"
+  project_id     = "gilbert-learning-gcp-113"
+  payload_format = "JSON_API_V1"
 }

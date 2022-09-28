@@ -8,7 +8,7 @@ resource "google_composer_environment" "composer_environment" {
     }
 
     node_config {
-      service_account = google_service_account.airflow_service_account.email
+      service_account = google_service_account.orchestration_owner.email
     }
   }
 }

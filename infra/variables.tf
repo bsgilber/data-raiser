@@ -38,3 +38,8 @@ variable "airflow_image" {
   type    = string
   default = "composer-2.0.26-airflow-2.2.5"
 }
+
+variable "env" {
+  type    = string
+  default = "dev"
+}
