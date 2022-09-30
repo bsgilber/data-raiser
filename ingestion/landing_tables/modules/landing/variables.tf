@@ -15,9 +15,9 @@ variable "dataset_id" {
   description = "id for the dataset (database) that this table should live in"
 }
 
-variable "schema_filepath" {
+variable "schema" {
   type        = string
-  description = "location of the json schema file"
+  description = "json schema as a string"
 }
 
 variable "time_partitioning_type" {

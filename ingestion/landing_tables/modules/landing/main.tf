@@ -12,7 +12,7 @@ resource "google_bigquery_table" "landing_table" {
     env = var.env
   }
 
-  schema = var.schema_file
+  schema = var.schema
 }
 
 data "google_iam_policy" "admin" {

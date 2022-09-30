@@ -9,3 +9,9 @@ variable "env" {
   description = "Environment name [DEV, STAGE, PROD]"
   default     = "DEV"
 }
+
+variable "payload_format" {
+  type        = string
+  description = "Expected payload format, either [NONE, JSON_API_V1]"
+  default     = "NONE"
+}
