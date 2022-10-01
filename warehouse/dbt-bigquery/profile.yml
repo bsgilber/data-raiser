@@ -1,0 +1,11 @@
+dropin-bigquery-db:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: gilbert-learning-gcp-113
+      dataset: raw
+      threads: 2
+      keyfile: 
+      timeout_seconds: 300
