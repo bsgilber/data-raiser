@@ -12,7 +12,6 @@ resource "google_compute_instance" "default" {
     }
   }
 
-  # Install Airbyte and Dependencies
   network_interface {
     network = "default"
 

@@ -11,7 +11,7 @@ sudo usermod -a -G docker $USER
 
 # install docker compose
 sudo apt-get -y install wget
-sudo wget https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m) -O /usr/local/bin/docker-compose
+sudo wget https://github.com/docker/compose/releases/download/2.11.2/docker-compose-$(uname -s)-$(uname -m) -O /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
 # install airbyte and stand it up
