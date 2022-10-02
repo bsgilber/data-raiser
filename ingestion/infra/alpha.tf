@@ -7,4 +7,5 @@ module "landing_table_creation_alpha" {
   schema                 = file("./schemas/alpha/schema.json")
   time_partitioning_type = "DAY"
   table_name             = "alpha_table"
+  prefix_filter          = "data/raw/alpha/"
 }

@@ -30,3 +30,8 @@ variable "table_name" {
   type        = string
   description = "A unique ID for the resource, this will double as the friendly name."
 }
+
+variable "prefix_filter" {
+  type        = string
+  description = "cloud storage prefix for where the data that feeds the table will be landing"
+}

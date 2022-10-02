@@ -31,3 +31,13 @@ resource "google_bigquery_table_iam_policy" "policy" {
   policy_data = data.google_iam_policy.admin.policy_data
 }
 
+resource "google_pubsub_subscription" "module_subscription" {
+  name  = format("%s-subscription", var.table_name)
+  topic = format("%s-landing-bucket-topic", var.env)
+
+  bigquery_config {
+    table = google_bigquery_table.landing_table.table_id
+  }
+
+  filter = var.prefix_filter
+}
